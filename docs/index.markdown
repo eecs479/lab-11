@@ -17,17 +17,17 @@ For the third (and final) time, we are looking at another way to estimate coordi
 
 Below are the circuits used in lab 3 to measure the \(X\), \(Y\), and \(Z\) axis of a qubit.
 
-![Placeholder: Lab 3 measurement circuits for X, Y, and Z axes](assets/images/placeholder-lab3-measurement-circuits.png)
+![Placeholder: Lab 3 measurement circuits for X, Y, and Z axes](assets/images/image1.png)
 
 These circuits are not fault-tolerant, because a single error on \(q_1\) could multiply to several physical qubits in \(q_0\), rendering error-correction ineffective. The following is a fault-tolerant approach.
 
-![Placeholder: Fault-tolerant measurement circuit overview](assets/images/placeholder-ft-measurement-overview.png)
+![Placeholder: Fault-tolerant measurement circuit overview](assets/images/image2.png)
 
 1. Prepare the circuit in the special cat state \(\lvert 000\rangle + \lvert 111\rangle\) (a multi-qubit generalization of the Bell state).
 
 2. Since an error may occur here and spread to our encoded data later, verify preparation by performing 3 parity checks (only one is shown in the handout) between every pair of cat qubits. If any of these measure \(1\), start over at step 1. The `while_loop` method will be helpful here.
 
-![Placeholder: Cat-state parity-check verification circuit](assets/images/placeholder-cat-state-parity-check.png)
+![Placeholder: Cat-state parity-check verification circuit](assets/images/image3.png)
 
 3. Once all parity checks pass and we are confident the cat state is prepared, apply the appropriate controlled gate transversally across each encoded data bit, ensuring each cat qubit is used only once to prevent new errors from multiplying.
    - \(X\) and \(Z\) gates work as expected, since they have eigenvalues \(+1\) and \(-1\). Because \(1^3 = 1\) and \((-1)^3 = -1\), applying 3 controlled gates preserves the expected sign.
