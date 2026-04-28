@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Lab 4 - Applying Phase Kickback
+title: Lab 11 - Fault-Tolerance
 email: eecs479staff@umich.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Lab 4of EECS 479: Quantum Computing.
+  Lab 11 of EECS 479: Quantum Computing.
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -45,7 +45,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 domain: eecs479.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://eecs479.github.io  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: /lab-4/      # must match GitHub repo name (project Pages path)
+baseurl: /lab-11/      # must match GitHub repo name (project Pages path)
 
 # https://github.com/eecs485staff/primer-spec
 remote_theme: eecs485staff/primer-spec
